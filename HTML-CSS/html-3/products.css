@@ -1,0 +1,200 @@
+:root {
+  --main-gray-color: #f5f5f5;
+
+  --section-heading-font-color: #1e1e1e;
+  --section-heading-font-size: 24px;
+  --section-heading-font-weight: 600;
+
+  --section-subheading-font-color: #757575;
+  --section-subheading-font-size: 20px;
+  --section-subheading-font-weight: 400;
+}
+
+.section-heading {
+  font-size: var(--section-heading-font-size);
+  font-weight: var(--section-heading-font-weight);
+  color: var(--section-heading-font-color);
+  margin-bottom: 8px;
+}
+.section-subheading {
+  font-size: var(--section-subheading-font-size);
+  font-weight: var(--section-subheading-font-weight);
+  color: var(--section-subheading-font-color);
+}
+.card-list-title {
+  font-size: var(--section-heading-font-size);
+  font-weight: var(--section-heading-font-weight);
+  color: var(--section-heading-font-color);
+  margin-bottom: 3px;
+}
+.card-list-desc {
+  font-size: 16px;
+  font-weight: var(--section-subheading-font-weight);
+  color: var(--section-subheading-font-color);
+}
+
+header {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > a {
+  width: 40px;
+}
+header > nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+header .menu-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+header .menu-list li {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+header .menu-list li:hover {
+  background: var(--main-gray-color);
+}
+header .btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+header .btn-wrap > a {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+header .btn-wrap > a:nth-child(1) {
+  border: 1px solid var(--section-heading-font-color);
+  background: var(--main-gray-color);
+}
+header .btn-wrap > a:nth-child(2) {
+  border: 1px solid var(--section-heading-font-color);
+  background: var(--section-heading-font-color);
+  color: var(--main-gray-color);
+}
+
+main .slide-wrap {
+  background: var(--main-gray-color);
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .slide-wrap .text-wrap {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .slide-wrap .text-wrap h2 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+main .slide-wrap .text-wrap h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--section-subheading-font-color);
+}
+
+.content-wrap {
+  padding: 32px;
+}
+.content-wrap .title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.content-wrap .title-wrap h4 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.content-wrap .title-wrap h5 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--section-subheading-font-color);
+}
+.content-wrap .product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33.3%, 1fr));
+  gap: 20px;
+}
+.content-wrap .product-list > a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-wrap .product-list > a .thumb {
+  width: 200px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.content-wrap .product-list > a .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-wrap .product-list > a .text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.content-wrap .product-list > a .text-wrap h6 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.content-wrap .product-list > a .text-wrap p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--section-subheading-font-color);
+}
+
+footer {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 64px;
+}
+footer .sns-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .sns-wrap > ul {
+  display: flex;
+  gap: 16px;
+}
+footer .site-map {
+  display: flex;
+  gap: 24px;
+  flex: 1 1 0;
+}
+footer .site-map > ul {
+  display: flex;
+  gap: 20px;
+}
+footer .site-map nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 0;
+}
+footer .site-map nav h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+footer .site-map nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .site-map nav ul a {
+  color: var(--section-subheading-font-color);
+}
