@@ -1,0 +1,210 @@
+* {
+  font-family: "NanumBarunGothic";
+}
+body {
+  font-family: "nbg", "맑은 고딕", HelveticaNeue, DroidSans, Sans-serif,
+    Helvetica;
+  font-size: 1em;
+  line-height: 1;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+header {
+  display: none;
+}
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+main .top-sec {
+  padding: 50px 0;
+}
+main .top-sec .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .top-sec .title-wrap > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+main .top-sec .title-wrap > .site-map {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+main .top-sec .title-wrap > .site-map > a:not {
+  color: #666;
+}
+main .top-sec .filter-box {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 25px 0;
+  padding: 30px;
+}
+main .top-sec .filter-box .title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+main .top-sec .filter-box .title-wrap h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+main .top-sec .filter-box .filter-wrap {
+  padding-top: 25px;
+}
+main .top-sec .filter-box .filter-wrap .tab-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main .top-sec .filter-box .filter-wrap .tab-wrap input[type="radio"] + label {
+  padding: 10px;
+  min-width: 200px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #f4f4f1;
+  color: #222;
+  cursor: pointer;
+}
+main
+  .top-sec
+  .filter-box
+  .filter-wrap
+  .tab-wrap
+  input[type="radio"]:checked
+  + label {
+  background: #006633;
+  color: #fff;
+}
+main .top-sec .filter-box .filter-wrap .checkbox-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 25px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+main .top-sec .filter-box .filter-wrap .checkbox-wrap > input + label {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  color: #444;
+}
+main .top-sec .filter-box .filter-wrap .checkbox-wrap > input + label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(./img/ck_icon.jpg) no-repeat center;
+}
+main
+  .top-sec
+  .filter-box
+  .filter-wrap
+  .checkbox-wrap
+  > input:checked
+  + label::before {
+  background: url(./img/ck_icon_on.jpg) no-repeat center;
+}
+
+.content-sec {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.content-sec .view-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content-sec .view-wrap input[type="radio"] + label {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #999;
+  font-size: 12px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.content-sec .view-wrap input[type="radio"]:checked + label {
+  background: #666;
+  color: #fff;
+}
+
+.content-sec .select-wrap {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-sec .select-wrap select {
+  color: #444;
+  border: none;
+  appearance: none;
+}
+.content-sec .list-wrap {
+  grid-column: 1/3;
+}
+.content-sec .list-wrap h3 {
+  background: #f4f4f2;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.content-sec .list-wrap h3 > img {
+  height: 35px;
+}
+.content-sec .list-wrap h3 > span {
+  font-size: 0.8rem;
+  color: #777;
+}
+.content-sec .coffee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px 20px;
+}
+.content-sec .coffee-list > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.content-sec .coffee-list > li > a {
+  width: 250px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.content-sec .coffee-list > li > a > img {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.content-sec .coffee-list > li > a:hover > img {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.content-sec .coffee-list > li > p {
+  font-size: 0.9rem;
+  color: #444;
+}
