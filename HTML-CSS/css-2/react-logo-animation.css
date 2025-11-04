@@ -1,0 +1,25 @@
+body {
+  /* width: 100%;
+  height: 100vh; */
+  /* display: flex;
+  align-items: center;
+  justify-items: center; */
+}
+img {
+  width: 100px;
+  animation: logo-spin 20s infinite;
+  /* transform-origin: 0 0; */
+}
+.react-logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+  transition: all 3s;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

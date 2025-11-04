@@ -26,8 +26,8 @@ main .top-sec .title-wrap {
   align-items: center;
 }
 main .top-sec .title-wrap > h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
 }
 main .top-sec .title-wrap > .site-map {
   display: flex;
@@ -207,4 +207,11 @@ main
 .content-sec .coffee-list > li > p {
   font-size: 0.9rem;
   color: #444;
+}
+
+footer {
+  background: #2c2a29;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 35px 0;
 }
