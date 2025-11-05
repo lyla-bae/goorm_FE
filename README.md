@@ -16,3 +16,8 @@
 ## ✨ 앞으로의 다짐
 
 꾸준히 학습하고 성장하는 개발자가 될게요. 🔥
+
+## 📁 폴더
+
+- [HTML-CSS](./HTML-CSS)
+- [team-study](./team-study)
