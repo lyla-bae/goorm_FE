@@ -3,34 +3,386 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>음료</title>
+    <title>음료 | Starbucks Korea</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="./img/logo.png" alt="Starbucks Logo" />
-      </div>
-      <div lang="gnb">
-        <nav class="util-nav">
-          <a href="#">Sign In</a>
-          <a href="#">My Starbucks</a>
-          <a href="#">Customer Service & Ideas</a>
-          <a href="#">Find a Store</a>
-          <a href="#">
-            <img src="./img/icon_magnifier_black.png" alt="검색하기" />
-          </a>
-        </nav>
-        <nav class="main-nav">
-          <a href="#">COFFEE</a>
-          <a href="#">MENU</a>
-          <a href="#">STORE</a>
-          <a href="#">ESG</a>
-          <a href="#">STARBUCKS REWARDS</a>
-          <a href="#">CORPORATE SALES</a>
-          <a href="#">WHAT'S NEW</a>
-        </nav>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Starbucks Logo" />
+        </div>
+        <div class="gnb">
+          <nav class="util-nav">
+            <a href="#">Sign In</a>
+            <a href="#">My Starbucks</a>
+            <a href="#">Customer Service & Ideas</a>
+            <a href="#">Find a Store</a>
+            <button type="button" href="#" class="btn-search">
+              <img src="./img/icon_magnifier_black.png" alt="검색하기" />
+            </button>
+          </nav>
+          <ul class="main-nav">
+            <li>
+              <a href="#">COFFEE</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">MENU</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">STORE</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">ESG</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">STARBUCKS REWARDS</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">CORPORATE SALES</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">WHAT'S NEW</a>
+              <div class="sub-nav">
+                <ul class="menu-container">
+                  <li>
+                    <a href="#">커피스타벅스</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">원두스타벅스</a></li>
+                      <li><a href="#">비아스타벅스 오리가미</a></li>
+                      <li><a href="#">스타벅스앳홈 by 캡슐</a></li>
+                      <li><a href="#">나와 어울리는 커피</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">커피 이야기</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">농장에서 우리의 손으로</a></li>
+                      <li><a href="#">최상의 아라비카 원두</a></li>
+                      <li><a href="#">스타벅스 로스트 스펙트럼</a></li>
+                      <li><a href="#">스타벅스 디카페인</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">스타벅스 리저브</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">RESERVE MAGAZINE</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">에스프레소 음료</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">도피오</a></li>
+                      <li><a href="#">에스프레소 마키아또</a></li>
+                      <li><a href="#">아메리카노마키아또</a></li>
+                      <li><a href="#">카푸치노</a></li>
+                      <li><a href="#">라떼</a></li>
+                      <li><a href="#">모카</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">최상의 커피를 즐기는 법</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">커피 프레스</a></li>
+                      <li><a href="#">푸어 오버</a></li>
+                      <li><a href="#">아이스 푸어 오버</a></li>
+                      <li><a href="#">커피 메이커</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -64,7 +416,10 @@
               </div>
               <div class="checkbox-wrap">
                 <input type="checkbox" id="all" checked />
-                <label for="all"> 전체 상품 보기 </label>
+                <label for="all">
+                  <before></before>
+                  전체 상품 보기
+                </label>
                 <input type="checkbox" id="coffee01" />
                 <label for="coffee01"> 콜드 브루 커피 </label>
                 <input type="checkbox" id="coffee02" />
@@ -179,8 +534,8 @@
       </div>
     </main>
     <footer>
-      <div class="container">
-        <section class="sitemap-sec">
+      <section class="sitemap-sec">
+        <div class="container">
           <nav>
             <h6>COMPANY</h6>
             <a href="#">한눈에 보기</a>
@@ -215,8 +570,10 @@
             <a href="#">채용 소개</a>
             <a href="#">채용 지원하기</a>
           </nav>
-        </section>
-        <section class="awards-sec">
+        </div>
+      </section>
+      <section class="awards-sec">
+        <div class="container">
           <a href="#">
             <img src="./img/footer_award.jpg" alt="여성가족부장관상" />
           </a>
@@ -238,8 +595,10 @@
           <a href="#">
             <img src="./img/footer_award.jpg" alt="여성가족부장관상" />
           </a>
-        </section>
-        <section class="copyright-sec">
+        </div>
+      </section>
+      <section class="copyright-sec">
+        <div class="container">
           <div class="rule-wrap">
             <a href="#" class="text-g">개인정보처리방침</a>
             <a href="#">영상정보처리기 운영관리 방침</a>
@@ -256,15 +615,17 @@
             <a href="#" class="footer-btn">신규입점제의</a>
             <a href="#" class="footer-btn">사이트 맵</a>
           </div>
-          <ul>
+          <ul class="info">
             <li>사업자등록번호 : 201-81-21515</li>
             <li>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</li>
             <li>TEL : 1522-3232</li>
             <li>개인정보 보호책임자 : 이찬우</li>
           </ul>
-          <span>ⓒ 2025 Starbucks Coffee Company. All Rights Reserved.</span>
-        </section>
-      </div>
+          <span class="copy"
+            >ⓒ 2025 Starbucks Coffee Company. All Rights Reserved.</span
+          >
+        </div>
+      </section>
     </footer>
   </body>
 </html>
