@@ -120,6 +120,7 @@ header .sub-menu > li > a {
 }
 header .sub-menu > li > a:hover {
   text-decoration: underline;
+  text-align: center;
 }
 
 .container {
