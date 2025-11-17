@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../reset.css" />
+
+    <title>Document</title>
+
+    <style>
+      body {
+        padding: 30px;
+      }
+      h2 {
+        color: darkblue;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      ul {
+        display: flex;
+        background-color: lightskyblue;
+        padding: 20px;
+        justify-content: space-around;
+      }
+      ul > li {
+        list-style: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      #reverse-btn {
+        float: right;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 18px;
+        border-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JS Second Practice Day2</h2>
+
+    <ul id="arr-list-container"></ul>
+
+    <button id="reverse-btn">Click to reverse!</button>
+
+    <script>
+      const arr_list = ["one", "two", "three", "four", "five", "six"];
+      const itemWrap = document.getElementById("arr-list-container");
+
+      // ul 안에 li 태그로 배열의 요소들을 함수로 만듬
+      function arr_sorted() {
+        itemWrap.innerHTML = arr_list
+          .map((item) => `<li class='item'>${item}</li>`)
+          .join("");
+      }
+      arr_sorted();
+
+      // 버튼 클릭시 배열을 역순으로 바꾸고 다시 ul 안에 li 태그로 배열의 요소들을 보여줌
+      const reverseBtn = document.getElementById("reverse-btn");
+
+      reverseBtn.addEventListener("click", function () {
+        arr_list.reverse();
+        arr_sorted();
+      });
+
+      // li 클릭시 배경색 토글
+      itemWrap.addEventListener("click", function (e) {
+        if (e.target.classList.contains("item")) {
+          e.target.style.backgroundColor =
+            e.target.style.backgroundColor === "" ? "white" : "";
+        }
+      });
+    </script>
+  </body>
+</html>
