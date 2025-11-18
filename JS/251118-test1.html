@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="251118-test1.css" />
+  </head>
+  <body>
+    <button class="btn">
+      <span class="text">WELCOME!</span>
+      <span class="loader"></span>
+    </button>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      const text = document.querySelector(".text");
+      const loader = document.querySelector(".loader");
+
+      btn.addEventListener("click", function () {
+        //btn 클래스명을 가지고 있는 버튼을 클릭했을 때 loading 이라는 클래스명이 붙습니다.
+        btn.classList.add("loading");
+        text.style.display = "none";
+        loader.style.display = "block";
+
+        setTimeout(function () {
+          btn.classList.remove("loading");
+          text.style.display = "block";
+          loader.style.display = "none";
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
