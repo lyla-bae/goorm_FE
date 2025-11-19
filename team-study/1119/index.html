@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://placehold.co/600" class="w-100" />
+          <h5>Card title</h5>
+          <p>가격 : 70000</p>
+        </div>
+      </div>
+      <button class="btn">more view</button>
+    </div>
+    <script>
+      //   var products = [
+      //     { id: 0, price: 70000, title: "Blossom Dress" },
+      //     { id: 1, price: 50000, title: "Springfield Shirt" },
+      //     { id: 2, price: 60000, title: "Black Monastery" },
+      //   ];
+
+      function fetchData() {
+        fetch("https://codingapple1.github.io/js/more1.json")
+          .then((res) => res.json())
+          .then((data) => {
+            data.forEach((item) => {
+              let box = `<div class="col-sm-4">
+            <img src="https://placehold.co/600" class="w-100" />
+          <h5>${item.title}</h5>
+          <p>가격 : ${item.price}</p>
+          </div>`;
+              document.querySelector(".row").innerHTML += box;
+            });
+          });
+      }
+      document.querySelector(".btn").addEventListener("click", fetchData);
+    </script>
+  </body>
+</html>
