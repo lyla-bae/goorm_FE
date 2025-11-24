@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: lightyellow;
+        height: 100vh;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      a {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="cart">
+      <h1>Cart</h1>
+      <ul class="cart-list"></ul>
+      <a href="./index.html">back</a>
+    </main>
+
+    <script>
+      const ulEl = document.querySelector(".cart-list");
+      let cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+
+      function displayCart() {
+        //로컬스토리지에 담긴게 없다면
+        if (cartList.length === 0) {
+          alert("장바구니에 상품이 없습니다.");
+          return (window.location.href = "./index.html");
+        }
+
+        //로컬스토리지에 담긴 배열 데이터바인딩
+        ulEl.innerHTML = cartList
+          .map((item) => {
+            return `<li><strong>${item.productName}</strong> x ${item.count}</li>`;
+          })
+          .join("");
+      }
+
+      displayCart();
+    </script>
+  </body>
+</html>
