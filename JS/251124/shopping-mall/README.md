@@ -8,3 +8,4 @@
 - Cart버튼을 누르면 장바구니 페이지로 이동하고, back 버튼을 누르면 이전으로 이동합니다.
 
 ![오늘의실습](recoding-ezgif.com-crop.gif)
+[링크 바로가기](https://lyla-bae.github.io/goorm_FE/JS/251124/shopping-mall/index.html)
