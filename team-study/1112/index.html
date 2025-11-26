@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form action="success.html">
+      <div class="my-3">
+        <input type="text" class="form-control" id="input-id" />
+      </div>
+      <div class="my-3">
+        <input type="password" class="form-control" id="input-pw" />
+      </div>
+      <button type="submit" class="btn btn-primary" id="send">전송</button>
+      <button type="button" class="btn btn-danger" id="close">닫기</button>
+    </form> -->
+
+    <button class="badge bg-dark">Dark 🔄</button>
+
+    <script>
+      // 실습1
+      //   //전송버튼 누르면 저기 input에 입력한값이 공백이면 알림창띄워주기
+      //   document.getElementById("send").addEventListener("input", function (e) {
+      //     if (document.getElementById("input-id").value == "") {
+      //       alert("아이디가 공백임");
+      //     } else if (document.getElementById("input-pw").value == "") {
+      //       alert("비번이 공백임");
+      //     } else if (document.getElementById("input-pw").value.length < 6) {
+      //       //비번이 6자 미만이면 알림띄우기
+      //       alert("비번은 6자 이상 쳐야댐");
+      //     }
+      //     e.preventDefault();
+      //   });
+
+      //   실습2
+      let count = 0;
+      document.querySelector(".badge").addEventListener("click", function () {
+        count++;
+        console.log(count);
+        if (count % 2 === 1) {
+          //   badge 홀수 클릭시 내부글자를 light로 변경
+          document.querySelector(".badge").innerText = "Light 🔄";
+        } else if (count % 2 === 0) {
+          //   badge 짝수 클릭시 내부글자를 dark로 변경
+          document.querySelector(".badge").innerText = "Dark 🔄";
+        }
+      });
+    </script>
+  </body>
+</html>

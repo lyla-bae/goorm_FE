@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- // Q5. 간단한 퀴즈 UI를 만들어봅시다. -->
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer" />
+    <button id="send-answer">제출</button>
+
+    <script>
+      //   여기에 기능 알아서 만드십시오
+      //   유저가 <input>에 답을 적고 제출버튼을 누를 수 있는 퀴즈 UI 입니다.
+      let count = 0;
+      document
+        .getElementById("send-answer")
+        .addEventListener("click", function () {
+          if (document.getElementById("answer").value !== "1335") {
+            //       2. 유저가 답을 3번 찍어서 못맞추면 alert('멍청아') 를 띄워봅시다.
+            count += 1;
+            console.log(count);
+            if (count >= 3) {
+              alert("멍청아");
+            }
+          } else if (document.getElementById("answer").value === "1335") {
+            //       1. 유저가 답을 맞추면 alert('성공');
+            alert("성공");
+          }
+        });
+    </script>
+  </body>
+</html>
