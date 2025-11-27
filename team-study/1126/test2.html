@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Q3. Promise chaining 
+2번 문제에서 https://codingapple1.github.io/hello.txt 라는 경로로 GET 요청을 한 뒤에
+.then을 이용해 인삿말을 콘솔창에 출력해보았습니다. 
+이번엔 그 직후 https://codingapple1.github.io/hello2.txt 라는 경로로 GET 요청을 또 하고
+.then을 이용해 인삿말을 또 출력해보고 싶습니다. 
+
+쉽게 말하면 
+1. hello.txt GET 요청
+2. 그게 완료되면 hello2.txt GET 요청
+3. 그게 완료되면 hello2.txt 결과를 콘솔창에 출력
+을 하고 싶다는 말입니다. 
+
+2번에서 만든 코드를 어떻게 업데이트하면 될까요?
+힌트1) 프로미스.then(()=>{둘째실행할거}).then(()=>{셋째실행할거})
+이렇게 then을 여러개 이어붙여 만들어봅시다.
+힌트2) .then()은 당연히 new Promise()로 생성한 프로미스 오브젝트들에 붙일 수 있습니다. -->
+
+    <script>
+      fetch("https://codingapple1.github.io/hello.txt")
+        .then((res) => {
+          return res.text();
+        })
+        .then(() => {
+          return fetch("https://codingapple1.github.io/hello2.txt");
+        })
+        .then((res) => {
+          return res.text();
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log("에러발생" + err);
+        });
+    </script>
+  </body>
+</html>
