@@ -1,23 +1,36 @@
-// App.jsx
-import { Fragment } from "react";
-import "./App.css";
-// import Avatar from "./Avatar";
+export default function Form() {
+  const [firstName, setFirstName] = "";
+  const [lastName, setLastName] = "";
 
-const poem = {
-  lines: [
-    "I write, erase, rewrite",
-    "Erase again, and then",
-    "A poppy blooms.",
-  ],
-};
+  function handleFirstNameChange(e) {
+    setFirstName = e.target.value;
+  }
 
-export default function App() {
-  const listItems = poem.lines.map((li, i) => (
-    <Fragment key={i}>
-      {i > 0 && <hr />}
-      <p>{li}</p>
-    </Fragment>
-  ));
+  function handleLastNameChange(e) {
+    setLastName = e.target.value;
+  }
 
-  return <article>{listItems}</article>;
+  function handleReset() {
+    setFirstName = "";
+    setLastName = "";
+  }
+
+  return (
+    <form onSubmit={(e) => e.preventDefault()}>
+      <input
+        placeholder="First name"
+        value={firstName}
+        onChange={handleFirstNameChange}
+      />
+      <input
+        placeholder="Last name"
+        value={lastName}
+        onChange={handleLastNameChange}
+      />
+      <h1>
+        Hi, {firstName} {lastName}
+      </h1>
+      <button onClick={handleReset}>Reset</button>
+    </form>
+  );
 }
