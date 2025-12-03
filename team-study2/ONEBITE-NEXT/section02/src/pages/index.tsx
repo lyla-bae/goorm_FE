@@ -3,13 +3,14 @@ import style from "./index.module.css"; // css를 모듈화
 import { ReactNode, useEffect } from "react";
 import books from "@/mock/books.json";
 import BookItem from "@/components/book.item";
-import { InferGetServerSidePropsType } from "next";
-import fetchBooks from "./lib/fetch-books";
-import fetchRandomBooks from "./lib/fetch-random-books";
+import { InferGetServerSidePropsType, InferGetStaticPropsType } from "next";
+import fetchBooks from "../lib/fetch-books";
+import fetchRandomBooks from "../lib/fetch-random-books";
 
 // page 컴포넌트보다 먼저실행되어서 컴포넌트에게 필요한 데이터를 불러오는 함수
 // 백엔드서버에서만 실행되기때문에 여기안에서 콘솔로그 같은건 터미널안에서만 실행됨
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
+  console.log("index page");
   // const allBooks = await fetchBooks();
   // const recoBooks = await fetchRandomBooks();
   const [allBooks, recoBooks] = await Promise.all([
@@ -25,7 +26,7 @@ export const getServerSideProps = async () => {
 export default function Home({
   allBooks,
   recoBooks,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className={style.container}>
       <section>
