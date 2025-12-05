@@ -20,6 +20,7 @@ export default function SideBar({
         selectedMemoIndex={selectedMemoIndex}
         setSelectedMemoIndex={setSelectedMemoIndex}
         onMemoDeleteClick={onMemoDeleteClick}
+        isSidebarOpen={isSidebarOpen}
       />
       <SideBarFooter onAddMemo={onAddMemo} />
     </div>

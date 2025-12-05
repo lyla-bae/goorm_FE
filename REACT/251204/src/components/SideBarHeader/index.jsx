@@ -5,7 +5,7 @@ export default function SideBarHeader({ toggleSidebar, isSidebarOpen }) {
     <div className="SideBarHeader">
       {isSidebarOpen && "메모장 "}
       <button onClick={toggleSidebar} className="btn-toggle">
-        {isSidebarOpen ? ">>" : "<<"}
+        {isSidebarOpen ? "<<" : ">>"}
       </button>
     </div>
   );
