@@ -1,4 +1,13 @@
 .SideBar {
+  background-color: #f0f0f0;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.SideBar.open {
   width: 200px;
-  background-color: #f0f0f0; /* 여기 바뀜 */
+}
+
+.SideBar.closed {
+  width: 60px;
 }

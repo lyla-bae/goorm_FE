@@ -1,32 +1,36 @@
 import MemoContainer from "./components/MemoContainer";
 import SideBar from "./components/SideBar/index";
 import "./App.css";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { localStorageSetItem } from "./lib/storage";
+
+function initMemosGetItem() {
+  return JSON.parse(localStorage.getItem("memos")) || [];
+}
 
 export default function App() {
-  const [memos, setMemos] = useState([
-    {
-      title: "memo 1",
-      content: "memo 1 content",
-      createAt: 1743920753833, // 시간 값 (생성 시간) new Date().getTime()
-      updateAt: 1743920753833, // 시간 값 (수정 시간)
-    },
-    {
-      title: "memo 2",
-      content: "memo 2 content",
-      createAt: 1743920753833, // 시간 값 (생성 시간) new Date().getTime()
-      updateAt: 1743920753833, // 시간 값 (수정 시간)
-    },
-  ]);
+  const [memos, setMemos] = useState(initMemosGetItem);
   const [selectedMemoIndex, setSelectedMemoIndex] = useState(0);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  const handleMemoChange = (newMemo) => {
-    const newMemos = [...memos];
-    newMemos[selectedMemoIndex] = newMemo;
-    setMemos(newMemos);
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
   };
 
-  const handleAddMemo = () => {
+  const handleMemoChange = useCallback(
+    (newMemo) => {
+      setMemos((prevMemos) => {
+        const newMemos = [...prevMemos];
+        newMemos[selectedMemoIndex] = newMemo;
+        localStorageSetItem("memos", newMemos);
+        return newMemos;
+      });
+    },
+    [selectedMemoIndex]
+  );
+
+  // 얜 굳이 바꿀 필요 없음
+  const handleAddMemo = useCallback(() => {
     const now = new Date().getTime();
     const newMemo = {
       title: "Untitled",
@@ -37,20 +41,29 @@ export default function App() {
     setMemos([...memos, newMemo]);
     // 여기서 memos state가 업데이트하기 전이니 memos.length를 사용하는거죠
     setSelectedMemoIndex(memos.length);
-  };
 
-  const handleDeleteMemo = (deleteMemoIndex) => {
-    const newMemo = memos.filter((memo, index) => index !== deleteMemoIndex);
-    setMemos(newMemo);
+    localStorageSetItem("memos", [...memos, newMemo]);
+  }, [memos]);
 
-    // 삭제한 메모가 현재 선택된 메모라면, 선택된 메모 인덱스를 0으로 설정
-    if (deleteMemoIndex === selectedMemoIndex) {
-      setSelectedMemoIndex(0);
-    } else if (deleteMemoIndex < selectedMemoIndex) {
-      // 삭제한 메모가 현재 선택된 메모보다 앞에 있다면, 선택된 메모 인덱스를 1 감소
-      setSelectedMemoIndex(selectedMemoIndex - 1);
-    }
-  };
+  const handleDeleteMemo = useCallback(
+    (deleteMemoIndex) => {
+      setMemos((prevMemos) => {
+        const newMemos = [...prevMemos];
+        newMemos.splice(deleteMemoIndex, 1);
+        localStorageSetItem("memos", newMemos);
+        return newMemos;
+      });
+
+      // 삭제한 메모가 현재 선택된 메모라면, 선택된 메모 인덱스를 0으로 설정
+      if (deleteMemoIndex === selectedMemoIndex) {
+        setSelectedMemoIndex(0);
+      } else if (deleteMemoIndex < selectedMemoIndex) {
+        // 삭제한 메모가 현재 선택된 메모보다 앞에 있다면, 선택된 메모 인덱스를 1 감소
+        setSelectedMemoIndex(selectedMemoIndex - 1);
+      }
+    },
+    [selectedMemoIndex]
+  );
 
   return (
     <div className="App">
@@ -60,6 +73,8 @@ export default function App() {
         setSelectedMemoIndex={setSelectedMemoIndex}
         onAddMemo={handleAddMemo}
         onMemoDeleteClick={handleDeleteMemo}
+        isSidebarOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
       />
       <MemoContainer
         memo={memos[selectedMemoIndex]}

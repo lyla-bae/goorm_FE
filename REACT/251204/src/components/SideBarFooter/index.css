@@ -14,3 +14,7 @@
   opacity: 0.6;
   cursor: pointer;
 }
+
+.SideBar.closed .SideBarFooter {
+  display: none;
+}

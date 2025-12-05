@@ -5,23 +5,25 @@ export default function MemoList({
   selectedMemoIndex,
   setSelectedMemoIndex,
   onMemoDeleteClick,
+  isSidebarOpen,
 }) {
   return (
     <div>
-      {memos.map((memo, index) => (
-        <MemoItem
-          key={index}
-          onMemoItemClick={() => setSelectedMemoIndex(index)}
-          isSelected={selectedMemoIndex === index}
-          onMemoDeleteClick={(e) => {
-            onMemoDeleteClick(index);
-            e.preventDefault();
-            e.stopPropagation();
-          }}
-        >
-          {memo.title}
-        </MemoItem>
-      ))}
+      {isSidebarOpen &&
+        memos.map((memo, index) => (
+          <MemoItem
+            key={index}
+            onMemoItemClick={() => setSelectedMemoIndex(index)}
+            isSelected={selectedMemoIndex === index}
+            onMemoDeleteClick={(e) => {
+              onMemoDeleteClick(index);
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+          >
+            {memo.title}
+          </MemoItem>
+        ))}
     </div>
   );
 }

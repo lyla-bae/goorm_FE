@@ -9,10 +9,12 @@ export default function SideBar({
   setSelectedMemoIndex,
   onAddMemo,
   onMemoDeleteClick,
+  isSidebarOpen,
+  toggleSidebar,
 }) {
   return (
-    <div className="SideBar">
-      <SideBarHeader />
+    <div className={`SideBar ${isSidebarOpen ? "open" : "closed"}`}>
+      <SideBarHeader toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
       <MemoList
         memos={memos}
         selectedMemoIndex={selectedMemoIndex}
